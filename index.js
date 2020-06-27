@@ -51,6 +51,11 @@ const findEmployeeByFirstName = function(employees, name) {
   return employees.find(employee => employee.firstName === name)
 }
 
+const calculatePayroll = function(employees) {
+  return employees.reduce((memo, employee) => {
+    return memo + allWagesFor.call(employee)
+  }, 0)
+}
 
 /*
  We're giving you this function. Take a look at it, you might see some usage
